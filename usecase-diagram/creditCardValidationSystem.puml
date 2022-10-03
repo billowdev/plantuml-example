@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+skinparam sequence {
+'ArrowColor DeepSkyBlue
+'ActorBorderColor DeepSkyBlue
+'LifeLineBorderColor blue
+'LifeLineBackgroundColor #A9DCDF
+
+'ParticipantBorderColor DeepSkyBlue
+'ParticipantBackgroundColor DodgerBlue
+ParticipantFontName Thai
+ParticipantFontSize 17
+'ParticipantFontColor #A9DCDF
+
+'ActorBackgroundColor blue
+ActorFontColor black
+ActorFontSize 17
+ActorFontName Thai
+}
+
+
+' -------------------------
+left to right direction
+
+actor "Customer" as actorCustomer
+actor "Retail Insitution" as actorRetailInstitution
+actor "Sponsoring Financial Institution" as actorSponsoringFinancialInstitution
+
+rectangle  "Credit Card Validation System" {
+   usecase (Perform Card Transaction) as usecasePerformCardTransaction
+   usecase  (Process Customer Bill) as usecaseProcessCustomerBill
+   usecase (Recocile Transactions) as usecaseRecocileTransactions
+   usecase (Manage Customer Account) as usecaseManageCustomerAccount
+
+    actorCustomer -- usecasePerformCardTransaction
+    actorCustomer -- usecaseProcessCustomerBill
+    actorCustomer -- usecaseManageCustomerAccount
+
+    usecaseProcessCustomerBill -- actorRetailInstitution
+    usecasePerformCardTransaction -- actorRetailInstitution
+    usecaseRecocileTransactions -- actorRetailInstitution
+
+    usecaseProcessCustomerBill -- actorSponsoringFinancialInstitution
+    usecaseManageCustomerAccount -- actorSponsoringFinancialInstitution
+}
+' ----------------------------
+
+
+
+@enduml

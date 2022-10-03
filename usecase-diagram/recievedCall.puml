@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor "ผู้รับโทรศัพท์" as actorCallReciever
+
+rectangle "การรับโทรศัพท์" as revievedCall {
+    usecase (รับโทรศัพท์) as usecaseRecieve
+    usecase (รับสายเรียกซ้อน) as usecaseCallWaiting
+
+    actorCallReciever -- usecaseRecieve
+    usecaseRecieve <. usecaseCallWaiting : <<extends>>
+}
+@enduml

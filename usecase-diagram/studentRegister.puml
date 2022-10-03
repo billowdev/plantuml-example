@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+actor "เจ้าหน้าที่" as actorRegisterationOfficer
+actor "นักศึกษา" as actorStudent
+
+rectangle "การลงทะเบียนเรียนของนักศึกษา" as rectangleRegisterationOfStudent {
+    usecase (ลงทะเบียนนักศึกษาใหม่) as usecaseRegisterOfNewStudent
+    usecase (ลงทะเบียนนักศึกษาปัจจุบัน) as usecaseRegisterOfPresentStudent
+    usecase (เก็บหลักฐาน) as usecaseKeepEvidence
+    usecase (ชำระเงินค่าเล่าเรียน) as usecasePayRegisterationFee
+    usecase (มีเงินไม่พอชำระค่าเล่าเรียน) as usecaseNotHaveEnoughMoneyForPayEducationFee
+    usecase (หลักฐานไม่พร้อม) as usecaseEvidenceNotReady
+    usecase (ได้รับการยกเว้นค่าเล่าเรียน) as usecaseExceptEducationFee
+
+    actorRegisterationOfficer -- usecaseRegisterOfNewStudent
+    actorRegisterationOfficer - usecaseRegisterOfPresentStudent
+    usecasePayRegisterationFee -- actorStudent
+
+    usecaseRegisterOfNewStudent -> usecasePayRegisterationFee : <<uses>>
+    usecaseRegisterOfNewStudent -> usecaseKeepEvidence : <<uses>>
+
+    usecaseRegisterOfPresentStudent --> usecasePayRegisterationFee : <<uses>>
+    usecaseRegisterOfPresentStudent --> usecaseKeepEvidence : <<uses>>
+
+    usecaseEvidenceNotReady ..> usecaseKeepEvidence : <<extends>>
+
+    usecaseExceptEducationFee <.. usecasePayRegisterationFee  :<<extends>>
+    usecaseNotHaveEnoughMoneyForPayEducationFee  <.. usecasePayRegisterationFee :<<extends>>
+
+}
+@enduml
