@@ -109,8 +109,6 @@ rectangle "การรับโทรศัพท์" as revievedCall {
 
 
 ##### studentRegister.puml
-![userAuthorization]()
-
 <img src="https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/studentRegister/studentRegister.png" width="600" title="studentRegister">
 
 ```java
