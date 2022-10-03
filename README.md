@@ -2,9 +2,9 @@
 
 ##### userAuthorization.puml
 
-<!-- ![userAuthorization](https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/userAuthorization/userAuthorization.png) -->
+![userAuthorization](https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/userAuthorization/userAuthorization.png)
 
-<img src="https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/userAuthorization/userAuthorization.png" width="600" title="userAuthorization">
+<!-- <img src="https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/userAuthorization/userAuthorization.png" width="600" title="userAuthorization"> -->
 
 
 ```java
@@ -30,9 +30,9 @@ rectangle "User Authorization" {
 
 
 ##### creditCardValidationSystem.puml
-<!-- ![userAuthorization](https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/creditCardValidationSystem/creditCardValidationSystem.png) -->
+![creditCardValidationSystem](https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/creditCardValidationSystem/creditCardValidationSystem.png)
 
-<img src="https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/creditCardValidationSystem/creditCardValidationSystem.png" width="600" title="creditCardValidationSystem">
+<!-- <img src="https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/creditCardValidationSystem/creditCardValidationSystem.png" width="600" title="creditCardValidationSystem"> -->
 
 ```java
 @startuml
@@ -87,9 +87,9 @@ rectangle  "Credit Card Validation System" {
 
 
 ##### recievedCall.puml
-<!-- ![userAuthorization](https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/recievedCall/recievedCall.png) -->
+![recievedCall](https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/recievedCall/recievedCall.png)
 
-<img src="https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/recievedCall/recievedCall.png" width="600" title="recievedCall">
+<!-- <img src="https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/recievedCall/recievedCall.png" width="600" title="recievedCall"> -->
 
 ```java
 @startuml
@@ -109,7 +109,9 @@ rectangle "การรับโทรศัพท์" as revievedCall {
 
 
 ##### studentRegister.puml
-<img src="https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/studentRegister/studentRegister.png" width="600" title="studentRegister">
+<!-- <img src="https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/studentRegister/studentRegister.png" width="600" title="studentRegister"> -->
+
+![studentRegister](https://raw.githubusercontent.com/billowdev/plantuml-example/main/out/usecase-diagram/studentRegister/studentRegister.png)
 
 ```java
 @startuml
