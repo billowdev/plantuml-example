@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+skinparam classAttributeIconSize 0
+' class name
+class Person {
+' attribute, state
+    - firstName
+    - lastName
+    - Age
+    # phone
+
+' method, ability, behavior
+    + getFirstName()
+    + getLastName()
+    + getAge()
+}
+
+@enduml
