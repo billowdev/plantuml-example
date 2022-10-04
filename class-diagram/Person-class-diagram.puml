@@ -6,14 +6,15 @@ skinparam classAttributeIconSize 0
 class Person {
 ' attribute, state
     - firstName
-    - lastName
+    # lastName
     - Age
-    # phone
+    - phone
 
 ' method, ability, behavior
     + getFirstName()
     + getLastName()
     + getAge()
+    + getPhone()
 }
 
 @enduml
