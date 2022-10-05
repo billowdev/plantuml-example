@@ -1,0 +1,85 @@
+@startuml
+'https://plantuml.com/class-diagram
+'Type	       Symbol
+'Extension	    <|--
+'Composition	*--
+'Aggregation	o--
+'
+
+skinparam classAttributeIconSize 0
+
+class ScienceDepartment {
+    +location
+    +phone
+}
+
+class Personnel {
+    -name
+    -age
+}
+
+' Aggregation
+ScienceDepartment o--  "1..n" Personnel
+
+
+class Room {
+    + id
+
+    +booking()
+    +checkIn()
+    +checkOut()
+}
+
+' Aggregation
+ScienceDepartment o--  "1..n" Room
+
+class Classroom {
+    +numberOfseats
+}
+
+class Lab{
+    +numberOfExperimentalTable
+}
+
+'Extension
+Room --|> Classroom
+Room --|> Lab
+'Lab <|-- Classroom
+
+class Hour{
+    -startTime
+    -endTime
+}
+
+Classroom "1..1" <-- "0..n" Hour : use
+Lab "0..1" <-- "0..n" Hour : use
+
+class Officer {
+    - role
+    + work()
+}
+class Student {
+    - avgGrade
+    + study()
+}
+class Teacher {
+    - position
+    + teaching()
+}
+
+class Subject {
+    -name
+    +getDescription()
+}
+Subject "1..n" -Left-> "1..1" Hour
+
+Officer -up-|> Personnel
+Teacher -up-|> Personnel
+Student -up-|> Personnel
+
+Student "1..n" -down-> "0..n" Subject : Study
+Teacher "1..n" -down-> "0..n" Subject : Teach
+
+
+
+@enduml
